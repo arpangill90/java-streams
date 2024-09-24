@@ -10,6 +10,6 @@ public class Main {
 
     //Simple print using method reference
     private static void printNumbers(List<Integer> numbers){
-        numbers.forEach(System.out::println); //for each integer in string, call this method
+        numbers.forEach(System.out::println); //for each integer in list, call this method
     }
 }
