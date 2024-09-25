@@ -7,6 +7,16 @@ public class Main {
 
         printNumbers(List.of(1,2,3,4));
         printEvenNumbers(List.of(1,2,3,4));
+        printSquareOfEvenNumbers(List.of(1,2,3,4));
+        printLongNames(List.of("JOE", "MARRY", "JOHN", "BRANDON"));
+
+    }
+
+    private static void printSquareOfEvenNumbers(List<Integer> numbers) {
+        numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .map(n -> n * n)
+                .forEach(System.out::println);
     }
 
     //Simple print using method reference
@@ -17,6 +27,12 @@ public class Main {
     private static void printEvenNumbers(List<Integer> numbers){
         numbers.stream()
                 .filter(n -> n % 2 == 0)
+                .forEach(System.out::println);
+    }
+
+    private static void printLongNames(List<String> names) {
+        names.stream()
+                .filter(name -> name.length() > 3)
                 .forEach(System.out::println);
     }
 }
