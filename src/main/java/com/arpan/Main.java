@@ -9,6 +9,7 @@ public class Main {
         printEvenNumbers(List.of(1,2,3,4));
         printSquareOfEvenNumbers(List.of(1,2,3,4));
         printLongNames(List.of("JOE", "MARRY", "JOHN", "BRANDON"));
+        printNameLength(List.of("JOE", "MARRY", "JOHN", "BRANDON"));
 
     }
 
@@ -33,6 +34,12 @@ public class Main {
     private static void printLongNames(List<String> names) {
         names.stream()
                 .filter(name -> name.length() > 3)
+                .forEach(System.out::println);
+    }
+
+    private static void printNameLength(List<String> names) {
+        names.stream()
+                .map(String::length)
                 .forEach(System.out::println);
     }
 }
