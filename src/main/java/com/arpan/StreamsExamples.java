@@ -11,6 +11,7 @@ public class StreamsExamples {
     public static void main(String[] args) {
         System.out.println(sumOfList(List.of(1, 2, 3, 4, 5)));
         System.out.println(sumOfOddNumbers(List.of(1, 2, 3, 4, 5)));
+        System.out.println(sumOfSquareOfEvenNumbers(List.of(1, 2, 3, 4, 5)));
     }
 
     private static int sumOfList(List<Integer> numbers) {
@@ -21,6 +22,13 @@ public class StreamsExamples {
     private static int sumOfOddNumbers(List<Integer> numbers) {
         return numbers.stream()
                 .filter(n ->  n%2 != 0)
+                .reduce(0, Integer::sum);
+    }
+
+    private static int sumOfSquareOfEvenNumbers(List<Integer> numbers) {
+        return numbers.stream()
+                .filter(n -> n%2 ==0)
+                .map( n -> n*n)
                 .reduce(0, Integer::sum);
     }
 }
