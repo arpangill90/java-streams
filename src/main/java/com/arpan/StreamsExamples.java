@@ -14,7 +14,6 @@ public class StreamsExamples {
 
     private static int sumOfList(List<Integer> numbers) {
         return numbers.stream()
-                .reduce(0, Integer::sum);
-
+                .reduce(0, Integer::sum); //to use lambda .reduced(0, (a,b) -> a+b)
     }
 }
