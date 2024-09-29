@@ -2,6 +2,9 @@ package com.arpan;
 
 import java.util.List;
 
+/**
+ * Contains Simple stream examples and high level method reference
+ */
 public class Main {
     public static void main(String[] args) {
 
