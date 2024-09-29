@@ -17,6 +17,7 @@ public class StreamsExamples {
         sortAndPrintNumbers(List.of(5, 10, 13, 13, 2, 5, 4, 3, 4, 5));
         sortAndPrintValues(List.of("", "JOE", "MOE", "MARY"));
         reverseSortAndPrintValues(List.of("", "JOE", "MOE", "MARY"));
+        sortByLengthAndPrintValues(List.of("", "JOE", "MOE", "MARY"));
 
     }
 
@@ -57,6 +58,13 @@ public class StreamsExamples {
         names.stream()
                 .filter(name -> !name.isEmpty())
                 .sorted(Comparator.reverseOrder())
+                .forEach(System.out::println);
+    }
+
+    private static void sortByLengthAndPrintValues(List<String> names) {
+        names.stream()
+                .filter(name -> !name.isEmpty())
+                .sorted(Comparator.comparing(String::length))
                 .forEach(System.out::println);
     }
 }
