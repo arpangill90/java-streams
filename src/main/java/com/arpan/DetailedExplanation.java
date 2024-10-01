@@ -1,6 +1,7 @@
 package com.arpan;
 
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class DetailedExplanation {
@@ -21,6 +22,26 @@ public class DetailedExplanation {
             @Override
             public boolean test(Integer integer) {
                 return integer % 2 == 0;
+            }
+        }*/
+    }
+
+    private static void printSquareOfEvenNumbers(List<Integer> numbers) {
+        numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .map(squareFunction())
+                .forEach(System.out::println);
+    }
+
+    private static Function<Integer, Integer> squareFunction() {
+        return n -> n * n;
+
+        //what is happening behind the scene
+       /* new Function<Integer, Integer>() {
+
+            @Override
+            public Integer apply(Integer integer) {
+                return integer*integer;
             }
         }*/
     }
