@@ -22,5 +22,8 @@ public class ThreadMain {
 
         thread3.start();
         thread4.start();
+        // a sample result for example 2 and counter:
+        //10000
+        //20000
     }
 }
