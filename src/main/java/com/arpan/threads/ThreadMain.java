@@ -5,14 +5,14 @@ public class ThreadMain {
     public static void main(String[] args) {
 
         //The first example - each thread has its own runnable - separate reference in the heap
-        MyRunnable myRunnable1 = new MyRunnable();
+     /*   MyRunnable myRunnable1 = new MyRunnable();
         Thread thread1 = new Thread(myRunnable1, "Thread-1");
 
         MyRunnable myRunnable2 = new MyRunnable();
         Thread thread2 = new Thread(myRunnable2, "Thread-2");
 
         thread1.start();
-        thread2.start();
+        thread2.start();*/
 
         //The second example - 2 threads using same runnable - same reference in the heap
         //thread stack is different
@@ -22,8 +22,11 @@ public class ThreadMain {
 
         thread3.start();
         thread4.start();
+        // Threads are being executed in the order decided by the operating system, therefore a large counter shows the real example
         // a sample result for example 2 and counter:
-        //10000
-        //20000
+//        1746785
+//        1974579
+        //if the test is ran multiple times, different result would come out
+
     }
 }
