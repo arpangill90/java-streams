@@ -1,5 +1,7 @@
 package com.arpan.array;
 
+import java.util.Arrays;
+
 public class RotateArrayElements {
 
     public static void main(String[] args) {
@@ -7,9 +9,7 @@ public class RotateArrayElements {
 
         process(numbers, 3);
 
-        for (int number : numbers) {
-            System.out.println(number);
-        }
+        System.out.println(Arrays.toString(numbers));
 
 
     }
